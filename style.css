@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.chat {
+    width: 100%; /* Ширина 100% */
+    height: 100vh; /* Высота 100% от высоты окна браузера */
+    overflow: hidden; /* Отключение общей прокрутки */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Шапка */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px; /* Фиксированная высота */
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.header_ul {
+    display: flex;
+}
+
+.header_li {
+    margin: 0px 30px;
+    cursor: pointer;
+}
+
+
+/* Левая панель */
+
+.sidebar {
+    margin-top: 50px;
+    width: 200px;
+    height: calc(100vh - 50px - 100px);
+    overflow-x: hidden;
+    overflow-y: auto; /* Внутренняя вертикальная прокрутка */
+    position: fixed;
+}
+
+
+/* Правая панель */
+
+.main {
+    height: calc(100vh - 50px - 100px);
+    margin-left: 200px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Внутренняя вертикальная прокрутка */
+}
+
+
+/* Подвал */
+
+.footer {
+    height: 100px;  /* Фиксированная высота */
+    display: flex;
+}
+
+.footer input {
+    width: 100%;
+    padding: 10px;
+}
